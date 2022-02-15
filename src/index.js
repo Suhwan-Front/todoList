@@ -1,6 +1,6 @@
-import deleteOrCheck from "./deleteOrCheck.js";
-import ButtonComponent from "./ButtonComponent.js";
-import AddComponent from "./addComponent.js";
+import deleteComponent from "./component/deleteComponent.js";
+import ButtonComponent from "./component/buttonComponent.js";
+import AddComponent from "./component/addComponent.js";
 
 const $ul = document.querySelector("ul");
 const $form = document.querySelector("form");
@@ -13,7 +13,7 @@ function init() {
   });
   $clear.addEventListener("click", (e) => $Button.clearTodoList(e));
   $ul.addEventListener("click", (e) => {
-    new deleteOrCheck(e);
+    new deleteComponent(e);
   });
 }
 init();

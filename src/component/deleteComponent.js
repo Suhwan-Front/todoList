@@ -1,10 +1,4 @@
-// export default function deleteOrCheck(e) {
-//   let remove = e.target.parentNode;
-//   let parentNode = remove.parentNode;
-//   parentNode.removeChild(remove);
-// }
-
-export default class deleteOrCheck {
+export default class deleteComponent {
   constructor(e) {
     if (e.target.className === "delete") {
       this.deleteToDo(e);
@@ -23,8 +17,10 @@ export default class deleteOrCheck {
     const todo = e.target.nextSibling;
     if (e.target.checked) {
       todo.style.color = "#dddddd";
+      todo.style.setProperty = ("text-decoration", "line-through");
     } else {
       todo.style.color = "#000000";
+      todo.style.setProperty = ("text-decoration", "none");
     }
   }
 }
